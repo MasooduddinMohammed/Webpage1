@@ -159,7 +159,7 @@ resource "null_resource" "nullmount" {
       "sudo mkfs.ext4 /dev/xvdh",
       "sudo mount /dev/xvdh /var/www/html",
       "sudo rm -rf /var/www/html/*",
-      "sudo git clone https://github.com/vineets300/Webpage1.git  /var/www/html"
+      "sudo git clone https://github.com/MasooduddinMohammed/Webpage1.git  /var/www/html"
     ]
   }
 }
@@ -185,7 +185,7 @@ resource "aws_s3_bucket" "demonewbucket12345" {
   }
 
  provisioner "local-exec" {
-    command = "git clone https://github.com/vineets300/Webpage1.git web-server-image"
+    command = "git clone https://github.com/MasoodudinMohammed/Webpage1.git web-server-image"
  }
 
 }
