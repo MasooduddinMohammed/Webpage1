@@ -1,6 +1,6 @@
 #Define the provider
 provider "aws" {
-    region = "ap-southeast-1"
+    region = "us-east-1"
 }
 
 #Create a virtual network
@@ -173,7 +173,7 @@ locals {
 resource "aws_s3_bucket" "demonewbucket12345" {
   bucket = "demonewbucket12345"
   acl    = "public-read-write"
-  region = "ap-southeast-1"
+  #region = "ap-southeast-1"
   
   versioning {
     enabled = true
@@ -185,7 +185,7 @@ resource "aws_s3_bucket" "demonewbucket12345" {
   }
 
  provisioner "local-exec" {
-    command = "git clone https://github.com/MasoodudinMohammed/Webpage1.git web-server-image"
+    command = "git clone https://github.com/MasooduddinMohammed/Webpage1.git web-server-image"
  }
 
 }
